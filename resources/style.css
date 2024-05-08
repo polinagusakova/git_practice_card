@@ -1,20 +1,38 @@
+:root {
+    --main: #000;
+    --main-rgb: 51, 51, 51;
+    color-scheme: light;
+}
+
 *, ::before, ::after {
     box-sizing: border-box;
 }
+
+.dark {
+    --main: #fff;
+    color-scheme: dark;
+}
+
 body {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     margin: 0; /*no margins for all page*/
+    color: var(--main);
+    min-height: 100vh;
+    position: relative;
 }
+
 img {
     width: 100%;
     height: 100%;
     
     object-fit: cover; /*fits to container*/
 }
+
 h1, h2, h3 {
     margin: 0;
 }
+
 .header {
     width: 100%;
     padding: 15px 10px 15px 0;
@@ -24,9 +42,11 @@ h1, h2, h3 {
     font-weight: 300;
     color: grey;
 }
+
 .header a {    
     transition: color 0.3s; /*smoothness on hover*/
 }
+
 .header a:hover {
     color: #4facfe;
 }
@@ -35,49 +55,65 @@ h1, h2, h3 {
     color: inherit; /*inherits color from .header */
     text-decoration: none; /*removes underline*/
 }
+
 .hero {
-    min-height: 100vh; /*one screen*/
     display: flex;
     justify-content: center;
     align-items: center; /*center items vertically*/
 }
+
 .container {
     max-width: 1230px;
     width: 100%;
     margin: 0 auto;
     padding: 0 15px;
 }
+
 .hero_container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
     grid-gap: 20px;
 }
+
 .hero_about {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
+.contact_me{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .hero_title {
     margin-bottom: 20px;
     font-size: 48px;
     line-height: 1.1;
 }
+
 .hero_subtitle {
     font-size: 32px;
     font-weight: 400;
 }
+
 .hero_links {
     display: flex;
 }
+
 .hero_link {
     margin-right: 10px;
     font-size: 30px; /*font icons*/
-    color: black;
+    color: var(--main);
     transition: color 0.3s; /*smoothness on hover*/
 }
+
 .hero_link:hover {
     color: #4facfe;
 }
+
 .hero_box {
     max-width: 500px;
     justify-self: center;
@@ -92,9 +128,15 @@ h1, h2, h3 {
     animation: ava-bg 3s infinite alternate;
 }
 
-.dark-mode {
-    background-color: black;
-    color: white;
+.footer {    
+    padding-top: 50px;
+}
+
+footer p {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
 
 @media screen and (max-width: 978px) {
