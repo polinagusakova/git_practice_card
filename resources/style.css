@@ -243,7 +243,7 @@ h1, h2, h3 {
     }
 
     .hero_box-img {
-        content: url(../resources/mobile_author.jpg);
+        content: url(resources/mobile_author.jpg);
     }
     /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
     .header a {
