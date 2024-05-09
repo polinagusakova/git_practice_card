@@ -6,6 +6,7 @@
 
 *, ::before, ::after {
     box-sizing: border-box;
+    scroll-behavior: smooth; 
 }
 
 .dark {
@@ -18,8 +19,6 @@ body {
     font-optical-sizing: auto;
     margin: 0; /*no margins for all page*/
     color: var(--main);
-    min-height: 100vh;
-    position: relative;
 }
 
 img {
@@ -33,6 +32,7 @@ h1, h2, h3 {
     margin: 0;
 }
 
+/*Header section*/
 .header {
     width: 100%;
     padding: 15px 10px 15px 0;
@@ -56,7 +56,9 @@ h1, h2, h3 {
     text-decoration: none; /*removes underline*/
 }
 
+/*Section for description of author*/
 .hero {
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center; /*center items vertically*/
@@ -72,20 +74,13 @@ h1, h2, h3 {
 .hero_container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
-    grid-gap: 20px;
+    grid-gap: 40px;
 }
 
 .hero_about {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
-
-.contact_me{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .hero_title {
@@ -100,12 +95,12 @@ h1, h2, h3 {
 }
 
 .hero_links {
-    display: flex;
+    display: flex;    
 }
 
 .hero_link {
     margin-right: 10px;
-    font-size: 30px; /*font icons*/
+    font-size: 40px; /*font icons*/
     color: var(--main);
     transition: color 0.3s; /*smoothness on hover*/
 }
@@ -114,9 +109,18 @@ h1, h2, h3 {
     color: #4facfe;
 }
 
+/*Section with icons for contact page*/
+.contact_me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Section with image of author*/
 .hero_box {
     max-width: 500px;
-    justify-self: center;
+    justify-self: center;    
     overflow: hidden;
     background-image: linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%); /*use gradient from website, image must be without backgroung and in png resolution*/
     border: 10px solid #fff;
@@ -128,52 +132,173 @@ h1, h2, h3 {
     animation: ava-bg 3s infinite alternate;
 }
 
-.footer {    
-    padding-top: 50px;
+
+/* Projects section */
+.hero_projects {
+    margin-top: 40px;
+    min-height: 90vh;
 }
 
-footer p {
-    position: absolute;
+.projects_title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.projects_container {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    text-align: center;
+}
+
+#first_project,
+#second_project,
+#third_project {
+    width: 500px;
+    height: 500px;
+    border: 10px solid #fff;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+#first,
+#second,
+#third {
+    margin: 0 auto;
+    width: 350px;
+    height: 350px;
+}
+
+/* Footer section */
+.footer {   
+    display: relative;
+}
+
+.footer p {
+    display: absolute;
     bottom: 0;
     width: 100%;
     text-align: center;
 }
 
+/* Button "top" section*/
+#myBtn {
+    display: none;
+    position: fixed; /* Fixed/sticky position */
+    bottom: 10px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    font-size: 50px; /* Increase font size */
+}
+
+.dropdown {
+    display: none;
+}
+
 @media screen and (max-width: 978px) {
     .header {
+        display: none;
         text-align: center;
     }
+
     .hero {
         padding-top: 30px;
     }
+
     .hero_container {
         grid-row-gap: 20px;
     }
+
     .hero_title {
         font-size: 28px;
         margin-bottom: 10px;
     }
+
     .hero_subtitle {
         font-size: 22px;
         font-weight: 400;
     }
+
     .hero_description {
         font-size: 14px;
     }
+
     .hero_about {
         text-align: center;
     }
+
     .hero_links {
         justify-content: center;
     }
+
+    .hero_projects {
+        justify-content: center;
+    }
+
     .hero_box {
-        min-width: 350px;
+        border: 7px solid purple;
+        max-width: 300px;
+        max-height: 300px;
+        border-radius: 50px 20px 50px 20px;
+    }
+
+    .hero_box-img {
+        content: url(../resources/mobile_author.jpg);
     }
     /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
     .header a {
         float: none;
         display: block;
     }
+
+    .projects_container {
+        flex-direction: column;
+    }
+
+    #first_project,
+    #second_project,
+    #third_project {
+        width: auto;
+    }
+
+    /* Dropdown menu if mobile version*/
+    .dropdown {
+        position: relative;
+        display: inline-block;
+        text-align: right;
+        width: 100%;
+    }
+
+    .bx-menu {
+        font-size: 40px;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 150px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        right: 0;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 10px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a:hover {background-color: #f1f1f1};
+
+    
+
 }
 
 @keyframes ava-animate { /*animate border*/
@@ -190,6 +315,7 @@ footer p {
         border-radius: 72% 28% 74% 26% / 26% 66% 34% 74% ;
     }
 }
+
 @keyframes ava-bg { /*animate gradient background*/
     from { /*can be "from" or "0%"*/
         backdrop-filter: hue-rotate(0);

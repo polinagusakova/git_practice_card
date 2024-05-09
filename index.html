@@ -16,11 +16,20 @@
 </head>
 <body>
     <header class="header">
-        <!--<a href="contact.html" class="header_logo logo">Contact</a> <!--class logo is needed to styling separately-->
         <a href="#" class="header_logo logo"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="#projects" class="header_logo"><i class='bx bx-plus'></i> Projects</a>
         <a href="contact.html" class="header_logo logo"><i class="fa fa-fw fa-envelope"></i> Contact</a>
         <a href="#" class="header_logo logo"><i class="fa-solid fa-circle-half-stroke"></i> <span id="theme">Theme</span></a>
     </header>
+    <div class="dropdown">
+        <i class='bx bx-menu' ></i>
+        <div class="dropdown-content">            
+            <a href="#" class="header_logo logo"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a href="#projects" class="header_logo"><i class='bx bx-plus'></i> Projects</a>
+            <a href="contact.html" class="header_logo logo"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+            <a href="#" class="header_logo logo"><i class="fa-solid fa-circle-half-stroke"></i> <span id="theme_mobile_menu"> Theme</span></a>
+        </div>
+    </div>
     <div class="hero">
         <div class="container hero_container">
             <div class="hero_about">
@@ -29,28 +38,55 @@
                 <p class="hero_description">About me</p>
                 <div class="hero_links" id="hero_links">
                     <a href="#" class="hero_link">
-                        <i class='bx bxl-facebook-circle'></i>
+                        <i class='bx bxl-html5'></i>
                     </a>
                     <a href="#" class="hero_link">
-                        <i class='bx bxl-instagram'></i>
+                        <i class='bx bxl-css3' ></i>
                     </a>
                     <a href="#" class="hero_link">
-                        <i class='bx bxl-telegram'></i>
+                        <i class='bx bxl-javascript' ></i>
                     </a>
-                    <a href="#" class="hero_link">
-                        <i class='bx bxl-linkedin-square'></i>
-                    </a>
-                </div>
+                </div>                
             </div>
             <div class="hero_box">
                 <img class="hero_box-img" src="resources/pol-removebg-preview.png" alt="Photo of Polina">
             </div>
         </div>
     </div>
-
+    <div class="hero_projects" id="projects">
+        <h2 class="hero_subtitle projects_title">MY PROJECTS</h2>
+        <div class="projects_container">
+            <div id="first_project">
+                <h3>First</h3>                
+                <div id="first">
+                    <img src="https://images.ctfassets.net/hrltx12pl8hq/7JnR6tVVwDyUM8Cbci3GtJ/bf74366cff2ba271471725d0b0ef418c/shutterstock_376532611-og.jpg" alt="">
+                    <p>First project includes business form</p>
+                    <a href="">Check</a>
+                </div>
+            </div>
+            <div id="second_project">
+                <h3>Second</h3>
+                <div id="second">
+                    <img src="https://gratisography.com/wp-content/uploads/2024/01/gratisography-cyber-kitty-800x525.jpg" alt="">
+                    <p>Second project includes photomatic page</p>
+                    <a href="">Check</a>
+                </div>
+            </div>
+            <div id="third_project">
+                <h3>Third</h3>
+                <div id="third">
+                    <img src="https://img.freepik.com/free-photo/sky-clouds-cinematic-clouds-wallpaper-4_1562-741.jpg" alt="">
+                    <p>Third project includes somthng else</p>
+                    <a href="">Check</a>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer class="footer">
         <p>Made with love<i class='bx bx-heart' style='color:#ea2727' ></i></p>
     </footer>
+    <p onclick="topFunction()" id="myBtn"><i class='bx bx-up-arrow-circle' style='color:#837878' ></i></i></p>
+    
     <script src="resources/script.js"></script>
 </body>
 </html>
