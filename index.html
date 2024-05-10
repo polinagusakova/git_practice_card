@@ -15,27 +15,31 @@
     <link rel="stylesheet" href="./resources/style.css">
 </head>
 <body>
+    <!--Adding header to PC version-->
     <header class="header">
-        <a href="#" class="header_logo logo"><i class="fa fa-fw fa-home"></i> Home</a>
+        <a href="#" class="header_logo"><i class="fa fa-fw fa-home"></i> Home</a>
         <a href="#projects" class="header_logo"><i class='bx bx-plus'></i> Projects</a>
-        <a href="contact.html" class="header_logo logo"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-        <a href="#" class="header_logo logo"><i class="fa-solid fa-circle-half-stroke"></i> <span id="theme">Theme</span></a>
+        <a href="contact.html" class="header_logo"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+        <a href="#" class="header_logo"><i class="fa-solid fa-circle-half-stroke"></i> <span id="theme">Theme</span></a>
     </header>
+    <!--Adding header to Mobile version-->
     <div class="dropdown">
         <i class='bx bx-menu' ></i>
         <div class="dropdown-content">            
-            <a href="#" class="header_logo logo"><i class="fa fa-fw fa-home"></i> Home</a>
+            <a href="#" class="header_logo"><i class="fa fa-fw fa-home"></i> Home</a>
             <a href="#projects" class="header_logo"><i class='bx bx-plus'></i> Projects</a>
-            <a href="contact.html" class="header_logo logo"><i class="fa fa-fw fa-envelope"></i> Contact</a>
-            <a href="#" class="header_logo logo"><i class="fa-solid fa-circle-half-stroke"></i> <span id="theme_mobile_menu"> Theme</span></a>
+            <a href="contact.html" class="header_logo"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+            <a href="#" class="header_logo"><i class="fa-solid fa-circle-half-stroke"></i> <span id="theme_mobile_menu"> Theme</span></a>
         </div>
     </div>
+    <!--Descriptive section about author-->
     <div class="hero">
         <div class="container hero_container">
             <div class="hero_about">
                 <h1 class="hero_title">Web Developer</h1>
                 <h2 class="hero_subtitle">Polina</h2>
                 <p class="hero_description">About me</p>
+                <!--Icons about author's skills-->
                 <div class="hero_links" id="hero_links">
                     <a href="#" class="hero_link">
                         <i class='bx bxl-html5'></i>
@@ -48,11 +52,13 @@
                     </a>
                 </div>                
             </div>
+            <!--Author's photo-->
             <div class="hero_box">
                 <img class="hero_box-img" src="resources/pol-removebg-preview.png" alt="Photo of Polina">
             </div>
         </div>
     </div>
+    <!--Section about created projects-->
     <div class="hero_projects" id="projects">
         <h2 class="hero_subtitle projects_title">MY PROJECTS</h2>
         <div class="projects_container">
@@ -82,9 +88,11 @@
             </div>
         </div>
     </div>
+    <!--Footer section-->
     <footer class="footer">
         <p>Made with love<i class='bx bx-heart' style='color:#ea2727' ></i></p>
     </footer>
+    <!--Adding button to go back to top of the page-->
     <p onclick="topFunction()" id="myBtn"><i class='bx bx-up-arrow-circle' style='color:#837878' ></i></i></p>
     
     <script src="resources/script.js"></script>

@@ -82,7 +82,6 @@ h1, h2, h3 {
     flex-direction: column;
     justify-content: center;
 }
-
 .hero_title {
     margin-bottom: 20px;
     font-size: 48px;
@@ -115,6 +114,7 @@ h1, h2, h3 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-height: 85vh;
 }
 
 /*Section with image of author*/
@@ -132,7 +132,6 @@ h1, h2, h3 {
     animation: ava-bg 3s infinite alternate;
 }
 
-
 /* Projects section */
 .hero_projects {
     margin-top: 40px;
@@ -146,7 +145,7 @@ h1, h2, h3 {
 
 .projects_container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     gap: 20px;
     text-align: center;
 }
@@ -175,6 +174,12 @@ h1, h2, h3 {
 
 .footer p {
     display: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footerContact {
     bottom: 0;
     width: 100%;
     text-align: center;
@@ -221,6 +226,9 @@ h1, h2, h3 {
 
     .hero_description {
         font-size: 14px;
+        text-align: center;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 
     .hero_about {
@@ -239,12 +247,12 @@ h1, h2, h3 {
         border: 7px solid purple;
         max-width: 300px;
         max-height: 300px;
-        border-radius: 50px 20px 50px 20px;
     }
 
     .hero_box-img {
-        content: url(resources/mobile_author.jpg);
+        content: url(../resources/mobile_author.jpg);
     }
+
     /* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
     .header a {
         float: none;
@@ -254,7 +262,7 @@ h1, h2, h3 {
     .projects_container {
         flex-direction: column;
     }
-
+    
     #first_project,
     #second_project,
     #third_project {
@@ -295,10 +303,10 @@ h1, h2, h3 {
         display: block;
     }
 
-    .dropdown-content a:hover {background-color: #f1f1f1};
-
-    
-
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+        color: #4facfe;
+    };
 }
 
 @keyframes ava-animate { /*animate border*/
